@@ -1,0 +1,163 @@
+<!DOCTYPE html><html>
+<head>
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #84a6e9, #1e3c72);
+            color: #fff;
+            transition: background 0.5s ease;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+        }
+        .header-content h1 {
+            font-size: 2.5rem;
+        }
+        .profile-picture {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            border: 3px solid #fff;
+        }
+        nav {
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #f4b400;
+        }
+        .section-content {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            margin: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            color: #000;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        .section-content:hover {
+            transform: scale(1.02);
+            background: rgba(255, 255, 255, 1);
+        }
+        .active-section {
+            background: #f4b400 !important;
+            transform: scale(1.05) !important;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .download-button {
+            background: #f4b400;
+            color: #fff;
+            padding: 0.7rem 1.5rem;
+            text-decoration: none;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .download-button:hover {
+            background: #d39e00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="profile.jpg.jpg" alt="Your Profile Picture" class="profile-picture">
+            <h1>Revathi V</h1>
+            <p>Computer Engineer</p>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+    <section id="about" class="section-content">
+        <h2>About Me</h2>
+        <p>I'm a BSc Computer Science student passionate about AI, web development, and problem-solving.</p>
+    </section>
+    <section id="education" class="section-content">
+        <h2>Education</h2>
+        <p>Pursuing BSc Computer Science at Chevalier T Thomas Elizabeth College for Women.</p>
+    </section>
+    <section id="skills" class="section-content">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python</li>
+            <li>Java</li>
+            <li>Excel</li>
+        </ul>
+    </section>
+    <section id="projects" class="section-content">
+        <h2>Projects</h2>
+        <ul>
+            <li><a href="index.html">Digital Portfolio</a></li>
+            <li><a href="index2.html">Webpage</a></li>
+        </ul>
+    </section>
+    <section id="resume" class="section-content">
+        <h2>Resume</h2>
+        <a href="resume.pdf.pdf" target="_blank" class="download-button">Download Resume</a>
+    </section>
+    <footer>
+        <p>&copy; 2025 Revathi V</p>
+    </footer>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                document.querySelectorAll('.section-content').forEach(section => {
+                    section.classList.remove('active-section');
+                });
+                if (targetElement) {
+                    targetElement.classList.add('active-section');
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 50,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
