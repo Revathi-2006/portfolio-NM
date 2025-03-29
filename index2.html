@@ -1,0 +1,123 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Webpage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Vibrant Animated Background */
+        body {
+            background: linear-gradient(270deg, #ff00ff, #ff9900, #00ffff, #ff007f);
+            background-size: 400% 400%;
+            animation: backgroundFlow 12s infinite alternate ease-in-out;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+        @keyframes backgroundFlow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        /* Twinkling Stars */
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .star {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 10px white;
+            animation: twinkle 3s infinite alternate ease-in-out;
+        }
+        @keyframes twinkle {
+            0% { opacity: 0.3; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+        /* Glassmorphism Navbar */
+        nav {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s ease-in-out;
+        }
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        /* Sections */
+        section {
+            padding: 100px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        /* Footer */
+        footer {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            font-size: 0.9em;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars">
+        <div class="star" style="top: 10%; left: 15%; animation-duration: 2s;"></div>
+        <div class="star" style="top: 30%; left: 50%; animation-duration: 3s;"></div>
+        <div class="star" style="top: 60%; left: 70%; animation-duration: 4s;"></div>
+        <div class="star" style="top: 80%; left: 20%; animation-duration: 5s;"></div>
+    </div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="index.html">Portfolio</a>
+        <a href="resume.pdf.pdf">Resume</a>
+        <a href="#contact">Contact</a>
+    </nav><section id="home">
+    <h1><strong>Welcome to HTML Webpage</strong></h1>
+</section>
+<section id="about">
+    <h2><strong>About this page</strong></h2><br><br>
+    <p><h1>A beautiful, animated, and modern website</h1></p></br></br>
+</section>
+
+<section id="contact">
+    <h1><strong>Contact Us</strong></h1><br><br>
+<h3><p>Email: vrevathi288@gmail.com</p><br>
+    <p>Phone: 8925999690</p></br></br></br></h3>
+</section>
+
+<footer>
+    <p>&copy; 2025 Elegance Webpage. All rights reserved.</p>
+    <p>Contact: vrevathi288@gmail.com | 8925999690</p>
+</footer>
+
+</body>
+</html>
